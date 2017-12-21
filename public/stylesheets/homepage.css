@@ -1,4 +1,144 @@
 @import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
 @import url('https://fonts.googleapis.com/css?family=Oswald');
+* {
+    transition-duration: 0.2s;
+}
 
+html,
+body {
+    height: 100%;
+    background: #bbd2c5;
+    background: -webkit-linear-gradient(to bottom, #bbd2c5, #536976, #292e49);
+    background: linear-gradient(to bottom, #bbd2c5, #536976, #292e49);
+    font-family: 'Oswald', sans-serif;
+}
 
+.nav>li {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.navbar {
+    border: 0px;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #fafafa;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:visited,
+.navbar-default .navbar-nav>li>a:active {
+    color: #fafafa;
+}
+
+.navbar-default .navbar-nav>li>a .glyphicon-chevron-down {
+    top: 3px;
+    left: 2px;
+    font-size: 14px;
+}
+
+.navbar-brand {
+    padding: 0 0;
+}
+
+.navbar-brand img {
+    width: 50px;
+}
+
+.dropdown-menu {
+    min-width: inherit;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    background-color: #F6F7F8;
+}
+
+.dropdown-menu>li>a {
+    white-space: normal;
+    color: black !important;
+}
+
+.dropdown-menu>li>a:hover {
+    letter-spacing: 2px;
+}
+
+.dropdown-menu>li>a>span {
+    margin-right: 5px;
+}
+
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:focus,
+.navbar-default .navbar-nav>.open>a:hover {
+    color: black;
+    background-color: transparent;
+    font-weight: bolder;
+}
+
+.navbar-default .navbar-nav>.open>a .glyphicon-chevron-down {
+    transform: rotate(180deg);
+}
+
+.navbar {
+    border-radius: 0px;
+}
+
+.navbar {
+    background: #16bffd;
+    background: -webkit-linear-gradient(to right, #16bffd, #cb3066);
+    background: linear-gradient(to right, #16bffd, #cb3066);
+}
+
+.navbar a:active: {
+    color: lightgrey;
+}
+
+.navbar a:visited: {
+    color: lightgrey;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: black;
+    border-width: 3px;
+}
+
+.navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: black;
+}
+
+.homepageJumbotron {
+    color: black;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    background-color: transparent;
+    padding: 20px 0px;
+}
+
+.directionLink {
+    margin: 15px auto;
+    letter-spacing: 2px;
+}
+
+.parkingStatusJumbotron {
+    padding: 30px;
+}
+
+.jumbotron .pull-right {
+    margin-right: 10px;
+}
+
+.parkingStatusOk {
+    color: #4CAF50;
+}
+
+.parkingStatusWrong {
+    color: #f44336;
+}
