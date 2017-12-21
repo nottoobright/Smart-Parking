@@ -1,0 +1,67 @@
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+body {
+	background: url('gradient.jpg');
+	font-family: 'Oswald', sans-serif;
+}
+.jumbotron {
+	text-align: center;
+	width: 30rem;
+	border-radius: 0.5rem;
+	margin: 0 auto;
+	background-color: transparent;
+	padding-top: 0px;
+}
+
+input {
+	width: 100%;
+	margin-bottom: 2.5rem;
+	padding: 1.5rem;
+	background-color: #ecf2f4;
+	border-radius: 0.2rem;
+	border: none;
+	font-size: 1.8rem;
+}
+
+h1.login-signup-heading {
+	margin-top: 0rem;
+	margin-bottom: 5rem;
+	letter-spacing: 2px;
+
+}
+.btn {
+	border-radius: 0.2rem;
+}
+.btn .glyphicon {
+	font-size: 3rem;
+	color: #fff;
+}
+.full-width {
+	width: 100%;
+	-webkit-border-top-right-radius: 0;
+	-webkit-border-bottom-right-radius: 0;
+	-moz-border-radius-topright: 0;
+	-moz-border-radius-bottomright: 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.box {
+	margin-bottom: 3rem;
+}
+
+
+button.full-width.login-signup-button {
+	border-color: transparent;
+	padding:1.2rem;
+	background-color: #81C784;
+}
+
+button.full-width.login-signup-button:hover {
+	background-color: #4CAF50;
+}
+.login-register-link a{
+	color: #BBDEFB;
+	font-size: 1.8rem;
+}
