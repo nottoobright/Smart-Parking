@@ -6,7 +6,7 @@ const { catchErrors } = require("../handlers/errorHandlers");
 
 //Get routes
 router.get('/login', user.loginForm);
-router.get('/register', user.register);
+router.get('/register', user.registerForm);
 router.get('/logout', auth.logout);
 router.get('/account', auth.isLoggedIn, user.account);
 

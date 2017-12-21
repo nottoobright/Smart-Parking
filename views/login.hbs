@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" href="../stylesheets/login-register.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <div class="container">
+            <img src="../images/car.jpg" />
+            <h1 class="login-signup-heading">Login</h1>
+            <form action="/user/login" method="post">
+                <div class="box login-form">
+                    <input type="text" name="email" id="email" placeholder="Email">
+                    <input type="password" name="password" id="password" placeholder="Password">
+                    <button class="btn btn-default login-signup-button full-width" type="submit">
+							<span class="glyphicon glyphicon-ok"></span>
+						</button>
+                </div>
+            </form>
+
+            <div class="login-register-link">
+                <a href="/user/register">Don't have an account ?</a>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

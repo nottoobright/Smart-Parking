@@ -5,6 +5,6 @@ const auth = require('../controllers/authController');
 const { catchErrors } = require('../handlers/errorHandlers');
 
 /* GET home page. */
-router.get('/', (req, res, next) => { res.render(index) });
+router.get('/', (req, res, next) => { res.render("index"), { title: "SmartParking" } });
 
 module.exports = router;

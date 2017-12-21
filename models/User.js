@@ -21,11 +21,15 @@ const userSchema = new Schema({
         required: 'Please enter your email address'
     },
     license: {
-        type: Number,
+        type: String,
         required: "Please enter your license plate number",
         trim: true
     },
     aadhar: {
+        type: Number,
+        trim: true
+    },
+    mobile: {
         type: Number,
         trim: true
     }
