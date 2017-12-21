@@ -1,17 +1,81 @@
-
 <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="../stylesheets/homepage.css">
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="../stylesheets/homepage.css">
-    <title>Homepage</title>
-</head>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+        </script>
+        <title>Homepage</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-static-top">
+            <!-- Dummy Navbar - Need to not make the navbar below block other content -->
+        </nav>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#smart-parking-navbar-collapse" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand active" aria-current="true" href="/">
+                        <img src="../images/car.jpg" /> 
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="smart-parking-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                Account
+                                <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a aria-current="false" href="/login.html">
+                                        <span class="glyphicon glyphicon-log-in"></span>
+                                        Sign In
+                                    </a>
+                                </li>
+                                <li role="separator" class="divider"></li>
+                                <li>
+                                    <a aria-current="false" href="/register.html">
+                                        <span class="glyphicon glyphicon-new-window"></span>
+                                        Sign Up
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="homepage" class="homepage container">
+            <div class="homepageJumbotron parkingSlotAllotedJumbotron jumbotron">
+                <h3>Parking Slot Alloted <span class="pull-right parkingSlotAlloted">11</span></h3>
+                <div class="directionLink">
+                    <a href="/direction/11">
+                        View Directions 
+                        <span class="glyphicon glyphicon-arrow-right"></span>
+                    </a> 
+                </div>
 
-<body>
-    <div id="homepage" class="homepage">
-        <p>Welcome to {{title}}</p>
-    </div>
-</body>
-
+            </div>
+            <div class="homepageJumbotron parkingStatusJumbotron jumbotron">
+                <h3>
+                    Parking Status 
+                    <span class="pull-right parkingStatus">
+                        <span class="parkingStatusOk glyphicon glyphicon-ok"></span>
+                        <!-- Replace the above span with the following to display if parked incorrectly:
+                        <span class="parkingStatusWrong glyphicon glyphicon-remove"></span> 
+                        -->
+                    </span>
+                </h3>
+            </div>
+        </div>
+    </body>
 </html>
