@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" href="login-register.css">
+		<script src="register.js"></script>
+		<title>Register</title>
+	</head>
+	<body>
+		<div class="jumbotron">
+			<div class="container">
+				<img src="car.jpg"/>
+				<h1 class="login-signup-heading">Register</h1>
+				<form action="/register" method="post">
+					<div class="box register-form">
+					<input type="text" id="fullName" name="fullName" placeholder="Full Name">
+					<input type="text" id="email" name="email" placeholder="Email">
+					<input type="password" id="password" name="password" placeholder="Password">
+					<input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password">
+					<input type="text" id="license" name="license" placeholder="Car License Plate Number">
+					<input type="number" id="aadharNo" name="aadharNo" placeholder="Aadhar Card No.">
+					<input type="number" id="mobileNo" name="mobileNo" placeholder="Mobile No.">
+					<button class="btn btn-default login-signup-button full-width" type="submit">
+						<span class="glyphicon glyphicon-ok"></span>
+					</button>
+					</div>
+				</form>
+
+				<div class="login-register-link">
+					<a href="login.html">Already have an account ?</a>
+				</div>
+
+			</div>
+		</div>	
+	</body>
+</html>
