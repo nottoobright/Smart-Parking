@@ -2,7 +2,9 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 
 body {
-	background: url('gradient.jpg');
+	background: #16bffd;
+    background: -webkit-linear-gradient(to right, #16bffd, #cb3066);
+    background: linear-gradient(to right, #16bffd, #cb3066);
 	font-family: 'Oswald', sans-serif;
 }
 .jumbotron {
