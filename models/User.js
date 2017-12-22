@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const md5 = require('md5');
 const validator = require('validator');
+const bcrrypt = require('bcrypt-nodejs');
 const passportLocalMongoose = require('passport-local-mongoose');
 
 mongoose.Promise = global.Promise;
@@ -40,6 +41,14 @@ userSchema.virtual('gravitar').get(function() {
     const hash = md5(this.email);
     return `https://gravatar.com/avatar/${hash}?s=200`;
 });
+
+userSchema.methods.generateHash = function(password) {
+  return bcrypt.hashSync(password, bcrypt.genSaltSync(5), null);
+};
+
+userSchema.methods.validPassword = function(password) {
+  return bcrypt.compareSync(password, this.password);
+};
 
 userSchema.plugin(passportLocalMongoose, { usernameField: 'email' });
 

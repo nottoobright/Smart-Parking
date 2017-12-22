@@ -6,15 +6,17 @@ const passport = require("passport");
 const promisify = require("es6-promisify");
 const flash = require("connect-flash");
 const path = require('path');
-const favicon = require('serve-favicon');
+const User = require('./models/User');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const expressValidator = require("express-validator");
 const errorHandlers = require("./handlers/errorHandlers");
+const LocalStrategy = require("passport-local");
 
 const index = require('./routes/index');
 const users = require('./routes/users');
+require("./config/passport");
 
 const app = express();
 
@@ -43,13 +45,19 @@ app.use(
     })
 );
 
+
 //Passport setup
 app.use(passport.initialize());
 app.use(passport.session());
+require('./config/passport');
 
 //Flash middleware for messages
 app.use(flash());
 
+app.use((req, res, next) => {
+  req.login = promisify(req.login, req);
+  next();
+});
 
 app.use('/', index);
 app.use('/user', users);

@@ -11,6 +11,8 @@
     "browserslist": "last 2 versions",
     "dependencies": {
         "axios": "0.15.3",
+        "bcrypt": "^1.0.3",
+        "bcrypt-nodejs": "0.0.3",
         "body-parser": "1.17.1",
         "connect-flash": "0.1.1",
         "connect-mongo": "1.3.2",
