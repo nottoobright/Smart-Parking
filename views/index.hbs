@@ -55,6 +55,7 @@
             </div>
         </nav>
         <div id="homepage" class="homepage container">
+            <input type="hidden" id='hiddenId' />
             <div class="homepageJumbotron parkingSlotAllotedJumbotron jumbotron">
                 <h3>Parking Slot Alloted <span class="pull-right parkingSlotAlloted">11</span></h3>
                 <div class="directionLink">
@@ -68,8 +69,8 @@
             <div class="homepageJumbotron parkingStatusJumbotron jumbotron">
                 <h3>
                     Parking Status 
-                    <span class="pull-right parkingStatus">
-                        <span class="parkingStatusOk glyphicon glyphicon-ok"></span>
+                    <span class="pull-right parkingStatus" id="parkingStatus">
+                        <span class="parkingStatusOk glyphicon glyphicon-ok" id="toggle-status"></span>
                         <!-- Replace the above span with the following to display if parked incorrectly:
                         <span class="parkingStatusWrong glyphicon glyphicon-remove"></span> 
                         -->
@@ -77,5 +78,8 @@
                 </h3>
             </div>
         </div>
+
+        <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+        <script src="./javascript/index.js"></script>
     </body>
 </html>
