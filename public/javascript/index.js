@@ -8,7 +8,7 @@ var config = {
   messagingSenderId: "1037990012805"
 };
 firebase.initializeApp(config);
-
+var parkStatus;
 var db = firebase.database();
 
 var id = hiddenId.value || Date.now();
@@ -23,24 +23,22 @@ db
 
 parkingRef = db.ref('/users/');
 
-parkingRef.on("child_added", data => {
-    parkStatus = reviewStatus(data.val());
-});
-
-console.log(parkStatus);
-
    
-if(!parkStatus) {
+$(document).ready(function(){
+  
+  parkingRef.on("child_added", data => {
+    parkStatus = reviewStatus(data.val());
+  });
+  
+  if(!parkStatus) {
     document.getElementById('toggle-status').classList.remove("parkingStatusOk");
     document.getElementById('toggle-status').classList.remove("glyphicon-ok");
     document.getElementById('toggle-status').classList.add("parkingStatusWrong");
     document.getElementById('toggle-status').classList.add("glyphicon-remove");
 };
-
-
+});
 
 function reviewStatus({name, liicense, properly_parked}) {
-    return `${properly_parked}`;
+    return properly_parked;
 };
 
-console.log("This works")
