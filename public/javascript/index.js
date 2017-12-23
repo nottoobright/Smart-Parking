@@ -13,32 +13,46 @@ var db = firebase.database();
 
 var id = hiddenId.value || Date.now();
 
-db
+/*db
     .ref("users/" + id)
     .set({
         name: "Yash Puthran",
         license: "MH041408",
         properly_parked: false
-    });
+    });*/
 
-parkingRef = db.ref('/users/');
+parkingRef = db.ref('users/2017');
 
    
 $(document).ready(function(){
-  
-  parkingRef.on("child_added", data => {
+
+  parkingRef.on('value', data => {
     parkStatus = reviewStatus(data.val());
+          if(!parkStatus) {
+        document.getElementById('toggle-status').classList.remove("parkingStatusOk");
+        document.getElementById('toggle-status').classList.remove("glyphicon-ok");
+        document.getElementById('toggle-status').classList.add("parkingStatusWrong");
+        document.getElementById('toggle-status').classList.add("glyphicon-remove");
+    };
+    if(parkStatus) {
+        document.getElementById('toggle-status').classList.add("parkingStatusOk");
+        document.getElementById('toggle-status').classList.add("glyphicon-ok");
+        document.getElementById('toggle-status').classList.remove("parkingStatusWrong");
+        document.getElementById('toggle-status').classList.remove("glyphicon-remove");
+    };
+    console.log("Value");
+    const message = reviewMessage(data.val());
+    responsiveVoice.speak(message);
   });
-  
-  if(!parkStatus) {
-    document.getElementById('toggle-status').classList.remove("parkingStatusOk");
-    document.getElementById('toggle-status').classList.remove("glyphicon-ok");
-    document.getElementById('toggle-status').classList.add("parkingStatusWrong");
-    document.getElementById('toggle-status').classList.add("glyphicon-remove");
-};
+
+
 });
 
-function reviewStatus({name, liicense, properly_parked}) {
+function reviewStatus({name, license, properly_parked, message}) {
     return properly_parked;
+};
+
+function reviewMessage({name, license, properly_parked, message}) {
+    return message;
 };
 

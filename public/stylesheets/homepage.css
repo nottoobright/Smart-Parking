@@ -7,9 +7,6 @@
 html,
 body {
     height: 100%;
-    background: #bbd2c5;
-    background: -webkit-linear-gradient(to bottom, #bbd2c5, #536976, #292e49);
-    background: linear-gradient(to bottom, #bbd2c5, #536976, #292e49);
     font-family: 'Oswald', sans-serif;
 }
 
